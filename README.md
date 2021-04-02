@@ -6,7 +6,7 @@ Jenis Masalah
 
 Digunakan peta Teyvat dengan jarak sebenarnya + medan sebagai _cost_:
 
-![](https://cdn.discordapp.com/attachments/454274817236140033/827426949168103444/Screenshot_1336.png)
+![](https://cdn.discordapp.com/attachments/454274817236140033/827436792612651028/Screenshot_1342.png)
 
 Peta yang sama, dengan tingkat bahaya peta sebagai _cost_:
 
@@ -21,6 +21,31 @@ Format File Graf
 
 File `teyvat.txt` dan `romania.txt` berisi definisi graf untuk peta Teyvat dan Romania masing-masing. Informasi lebih lanjut mengenai format ini
 dapat dilihat pada file `teyvat.txt`.
+
+Implementasi parsing dari format ini bisa dilihat pada `GraphInfo.cpp`.
+
+Compile
+-----
+
+Baik compiler MSVC, Clang, maupun GCC dapat digunakan asal mendukung C++14.
+
+MSVC:
+```
+cl.exe /EHsc /Fea.exe /Ox /Ot /D_CRT_SECURE_NO_WARNINGS *.cpp
+```
+
+Clang:
+```
+clang++ -O3 *.cpp
+```
+
+GCC:
+```
+g++ -O3 *.cpp
+```
+
+Akan dihasilkan executable `a.exe` (Windows) atau `a.out` (OS lain). File tersebut menerima 1 argumen angka opsional: banyak kali pengujian.
+Jadi, `a.exe` akan menguji sebanyak 1 kali dan `a.exe 500` akan menguji sebanyak 500 kali.
 
 Fungsi Heuristik
 -----
@@ -46,18 +71,18 @@ Waktu dan memori serta hasil cost dan ekspansi berturut-turut:
 
 |   Masalah/Algoritma   | Teyvat: Mondstadt - Dawn Winery (Jarak) | Teyvat: Mondstadt - Dawn Winery (Bahaya) | Teyvat: Starfell Lake - Stormterror's Lair (Jarak) | Teyvat: Starfell Lake - Stormterror's Lair (Bahaya) | Romania: Arad - Bucharest         |
 | --------------------- | --------------------------------------- | ---------------------------------------- | -------------------------------------------------- | --------------------------------------------------  | --------------------------------- |
-| Best-First: Terendah  | **3370.76 ns, 904 bytes, 1240, 2**      | **8953.95 ns, 904 bytes, 14, 2**         | **5149.24 ns, 1288 bytes, 3068, 5**                | 19454.09 ns, 1384 bytes, 60, 5                      | 3674.42 ns, 904 bytes, 450, 3     |
-| A\*: Terendah         | **2936.85 ns, 624 bytes, 1240, 2**      | **8641.24 ns, 624 bytes, 14, 2**         | **27526.69 ns, 5952 bytes, 3068, 5**               | 120705.09 ns, 5976 bytes, 57, 6                     | **4705.88 ns, 672 bytes, 418, 4** |
+| Best-First: Terendah  | 3370.76 ns, 904 bytes, **1240, 2**      | 8953.95 ns, 904 bytes, **14, 2**         | 5149.24 ns, 1288 bytes, **3068, 5**                | 19454.09 ns, 1384 bytes, 60, 5                      | 3674.42 ns, 904 bytes, 450, 3     |
+| A\*: Terendah         | 2936.85 ns, 624 bytes, **1240, 2**      | 8641.24 ns, 624 bytes, **14, 2**         | 27526.69 ns, 5952 bytes, **3068, 5**               | 120705.09 ns, 5976 bytes, 57, 6                     | 4705.88 ns, 672 bytes, **418, 4** |
 
-Data berhuruf tebal berarti algoritma tersebut menghasilkan solusi optimum.
+Angka berhuruf tebal berarti algoritma menghasilkan solusi terbaik pada masalah tersebut.
 
 Kesimpulan
 -----
 
-* A\* selalu memberi solusi optimum dari uji coba.
+* Rata-rata, A\* memberi solusi terbaik dari uji coba.
 
 * Fungsi heuristik yang digunakan sangat mempengaruhi algoritma A\* secara signifikan. Bisa dilihat ada perbedaan waktu signifikan pada mencari jalan teraman pada peta Teyvat.
 
 * Fungsi heuristik juga mempengaruhi kebenaran dari hasil. Pada masalah mencari jalan teraman dari Starfell Lake ke Stormterror's Lair, hasil optimumnya adalah: Starfell Lake --> Whispering Woods --> Mondstadt --> Springvale --> Dawn Winery --> Wolvendom --> Brightcrown Canyon --> Stormterror's Lair dengan _cost_ 55.
 
-* Best-First tidak memperhatikan cost yang sudah dicapai sehingga tidak memberi solusi optimum pada peta Romania
+* Best-First tidak memperhatikan cost yang sudah dicapai sehingga tidak memberi solusi terbaik pada peta Romania

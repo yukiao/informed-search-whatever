@@ -4,4 +4,5 @@ a.exe
 a.out
 result.txt
 result1.txt
+*.obj
 *.png
