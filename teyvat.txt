@@ -1,0 +1,121 @@
+Teyvat Graph Format 1.0
+# This is comment of course
+
+Info:
+Resolution: 5120x5120
+Parameter: 2
+
+Vertex:
+# <xpos>x<ypos>: name, without dash
+# Naming is case-sensitive
+# Naming exception: Dash is allowed if there are no whitespace between them
+3092x1328: Mondstadt
+3376x1186: Whispering\nWoods
+3561x1020: Starfell Lake
+3480x780: Stormbearer Mountain
+3936x702: Stormbearer Point
+3518x1640: Windrise
+3816x1798: Falcon Coast
+3950x1240: Thousand\nWinds Temple
+3958x988: Starsnatch\nCliff
+3128x1662: Springvale
+3870x2244: Dadaupa Gorge
+4286x2102: Cape Oath
+2662x1810: Dawn Winery
+2664x1454: Wolvendom
+2644x834: Brightcrown Canyon
+2102x960: Stormterror's Lair
+1960x2130: Stone Gate
+# 1820x2006: Wuwang Hill
+# 1614x1866: Qingce Village
+# 1852x2450: Dihua Marsh
+# 1928x2682: Wangshu Inn
+# 1912x2976: Guili Plains
+# 2520x2808: Mingyun Village
+# 2406x2372: Sal Terrae
+# 2460x3132: Yaoguang Shoal
+# 1394x3168: Cuijue Slope
+# 1584x3436: Luhua Pool
+# 1024x2916: Jueyun Karst
+# 806x2748: Qingyun Peak
+# 578x2634: Huaguang\nStone Forest
+# 628x2496: Mt. Aozang
+# 394x2870: Mt. Hulao
+# It's actually named Nantianmen but we don't want to create trouble regarding at 1989
+# 552x3180: Nantian
+# 990x3436: Tianqiu Valley
+# 1348x3770: Dunyu Ruins
+# 1078x4100: Lingju Pass
+# 948x4472: Qingxu Pool
+# 526x4282: The Chasm
+# 1574x4222: Mt. Tianheng
+# 1974x4142: Liyue Harbor
+3278x2124: Snow-Covered Path
+# 3232x2440: Entombed City\n(Ancient Palace)
+3010x2236: Wyrmrest Valley
+# 2692x2556: Entombed City\n(Outskirts)
+
+Edges:
+# Source - Destination - Parameter1 Parameter2 ... ParameterN
+# Source - Destination - <Actual travelled distance> <Dangerous level>
+Mondstadt              - Whispering\nWoods      - 384  1
+Mondstadt              - Windrise               - 452  3
+Mondstadt              - Springvale             - 549  0
+Whispering\nWoods      - Starfell Lake          - 343  5
+Whispering\nWoods      - Stormbearer Mountain   - 477  11
+Starfell Lake          - Stormbearer Mountain   - 293  9
+Starfell Lake          - Stormbearer Point      - 640  22
+Stormbearer Mountain   - Stormbearer Point      - 462  23
+Windrise               - Falcon Coast           - 338  10
+Windrise               - Thousand\nWinds Temple - 951  24
+Windrise               - Springvale             - 560  6
+Windrise               - Dadaupa Gorge          - 901  30
+Windrise               - Starfell Lake          - 721  8
+Thousand\nWinds Temple - Starsnatch\nCliff      - 497  16
+Springvale             - Dadaupa Gorge          - 1197 30
+Springvale             - Dawn Winery            - 691  14
+Springvale             - Wolvendom              - 669  26
+Springvale             - Snow-Covered Path      - 1107 12
+Dadaupa Gorge          - Cape Oath              - 506  21
+Dadaupa Gorge          - Snow-Covered Path      - 935  16
+Dawn Winery            - Wolvendom              - 550  9
+Dawn Winery            - Stone Gate             - 1050 30
+Dawn Winery            - Wyrmrest Valley        - 670  14
+Wolvendom              - Stormterror's Lair     - 1123 28
+Wolvendom              - Brightcrown Canyon     - 698  17
+Brightcrown Canyon     - Stormterror's Lair     - 734  9
+# Stone Gate             - Wuwang Hill            - 792  20
+# Wuwang Hill            - Qingce Village         - 1018 16
+Snow-Covered Path      - Wyrmrest Valley        - 411  27
+# Stone Gate - Dihua Marsh
+# Dihua Marsh - Wangshu Inn
+# Wangshu Inn - Guili Plains
+# Guili Plains - Mingyun Village
+# Guili Plains - Yaoguang Shoal
+# Guili Plains - Cuijue Slope
+# Guili Plains - Luhua Pool
+# Guili Plains - Liyue Harbor
+# Mingyun Village - Sal Terrae
+# Mingyun Village - Yaoguang Shoal
+# Cuijue Slope - Luhua Pool
+# Cuijue Slope - Jueyun Karst
+# Cuijue Slope - Tianqiu Valley
+# Jueyun Karst - Qingyun Peak
+# Qingyun Peak - Mt. Hulao
+# Qingyun Peak - Mt. Aozang
+# Qingyun Peak - Huaguang\nStone Forest
+# Qingyun Peak - Nantian
+# Mt. Hulao - Nantian
+# Tianqiu Valley - Nantian
+# Tianqiu Valley - Dunyu Ruins
+# Lingju Pass - Dunyu Ruins
+# Lingju Pass - Mt. Tianheng
+# Lingju Pass - Qingxu Pool
+# Lingju Pass - The Chasm
+# Mt. Tianheng - Liyue Harbor
+# Mt. Tianheng - Qingxu Pool
+# Snow-Covered Path - Entombed City\n(Ancient Palace)
+# Entombed City\n(Outskirts) - Entombed City\n(Ancient Palace)
+# Entombed City\n(Outskirts) - Wyrmrest Valley
+# Entombed City\n(Outskirts) - Sal Terrae
+# Entombed City\n(Outskirts) - Mingyun Village
