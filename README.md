@@ -69,10 +69,10 @@ Runs: 100000 (seratus ribu)
 
 Waktu dan memori serta hasil cost dan ekspansi berturut-turut:
 
-|   Masalah/Algoritma   | Teyvat: Mondstadt - Dawn Winery (Jarak) | Teyvat: Mondstadt - Dawn Winery (Bahaya) | Teyvat: Starfell Lake - Stormterror's Lair (Jarak) | Teyvat: Starfell Lake - Stormterror's Lair (Bahaya) | Romania: Arad - Bucharest         |
-| --------------------- | --------------------------------------- | ---------------------------------------- | -------------------------------------------------- | --------------------------------------------------  | --------------------------------- |
-| Best-First: Terendah  | 3370.76 ns, 904 bytes, **1240, 2**      | 8953.95 ns, 904 bytes, **14, 2**         | 5149.24 ns, 1288 bytes, **3068, 5**                | 19454.09 ns, 1384 bytes, 60, 5                      | 3674.42 ns, 904 bytes, 450, 3     |
-| A\*: Terendah         | 2936.85 ns, 624 bytes, **1240, 2**      | 8641.24 ns, 624 bytes, **14, 2**         | 27526.69 ns, 5952 bytes, **3068, 5**               | 120705.09 ns, 5976 bytes, 57, 6                     | 4705.88 ns, 672 bytes, **418, 4** |
+|   Masalah/Algoritma      | Teyvat: Mondstadt - Dawn Winery (Jarak) | Teyvat: Mondstadt - Dawn Winery (Bahaya) | Teyvat: Starfell Lake - Stormterror's Lair (Jarak) | Teyvat: Starfell Lake - Stormterror's Lair (Bahaya) | Romania: Arad - Bucharest         |
+| ------------------------ | --------------------------------------- | ---------------------------------------- | -------------------------------------------------- | --------------------------------------------------  | --------------------------------- |
+| Greedy Search: Terendah  | 3370.76 ns, 904 bytes, **1240, 2**      | 8953.95 ns, 904 bytes, **14, 2**         | 5149.24 ns, 1288 bytes, **3068, 5**                | 19454.09 ns, 1384 bytes, 60, 5                      | 3674.42 ns, 904 bytes, 450, 3     |
+| A\*: Terendah            | 2936.85 ns, 624 bytes, **1240, 2**      | 8641.24 ns, 624 bytes, **14, 2**         | 27526.69 ns, 5952 bytes, **3068, 5**               | 120705.09 ns, 5976 bytes, 57, 6                     | 4705.88 ns, 672 bytes, **418, 4** |
 
 Angka berhuruf tebal berarti algoritma menghasilkan solusi terbaik pada masalah tersebut.
 
